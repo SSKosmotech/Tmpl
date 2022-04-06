@@ -1,0 +1,84 @@
+$text_color: #232323;
+$active_color: purple;
+$link_color: tomato;
+$font_size: 1rem;
+$line_height: 1.5rem;
+$base_margin: 1.7rem;
+$main_font_family: Arial, Helvetica, sans-serif;
+$main_background_color: #fff;
+$base_fz: 16;
+
+@mixin fz($size_in_px) {
+  font-size:($size_in_px/$base_fz)+rem;
+}
+
+@import '../styles/parts/reset';
+// @import 'font';
+
+body {
+    background-color: $main_background_color;
+    font-family: $main_font_family;
+    color: $text_color;
+    font-size: $font_size;
+    // @include fz(16);
+    line-height: $line_height;
+    /* font-weight: normal; */
+}
+
+.container {
+    max-width: 1600px;
+    width: 90%;
+    margin: 0 auto;
+    /* width: calc(100% - 30px); */
+    /* border: 1px solid red;  */
+    /* height: 100%; */
+}
+
+.container-full {
+    width: 100%;
+    border: 1px solid red; 
+    /* height: 100%; */
+}
+
+/* ============================================ */
+
+header {
+    background-color: lightblue;
+    height: 100px;
+}
+
+header .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+#logo a {
+    text-decoration: none;
+}
+
+#main_menu ul {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+#main_menu ul li {
+    margin: 0 10px;
+}
+
+main {
+    padding: 80px 0;
+}
+
+footer {
+    background-color: #888;
+    height: 120px;
+}
+
